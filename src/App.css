@@ -1,0 +1,120 @@
+/* Основные стили */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Белый цвет фона */
+  color: #333; /* Цвет текста */
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Распределить пространство между лого и навигацией */
+  align-items: center; /* Вертикальное выравнивание по центру */
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 50px; /* Уменьшенный размер лого */
+  height: auto;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Центрирование навигационного меню */
+}
+
+nav a {
+  color: #000000; /* Черный цвет ссылок в навигации */
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+p {
+  text-align: center;
+}
+
+footer {
+  background-color: #000000; /* Черный цвет фона для footer */
+  color: #ffffff; /* Белый цвет текста для footer */
+  text-align: center;
+  padding: 5px 0;
+  width: 100%;
+}
+
+/* Мобильные устройства (до 600px) */
+@media (max-width: 600px) {
+  nav {
+      flex-direction: column;
+  }
+
+  nav a {
+      padding: 10px 0;
+  }
+
+  main {
+      padding: 10px;
+  }
+
+  footer {
+      padding: 5px 0;
+  }
+}
+
+/* Планшеты (от 600px до 768px) */
+@media (min-width: 600px) and (max-width: 768px) {
+  nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  nav a {
+      margin: 5px;
+      padding: 10px;
+  }
+
+  main {
+      padding: 15px;
+  }
+
+  footer {
+      padding: 10px 0;
+  }
+}
+
+/* Настольные компьютеры (от 768px и выше) */
+@media (min-width: 768px) {
+  nav {
+      flex-direction: row;
+  }
+
+  nav a {
+      padding: 10px;
+  }
+
+  main {
+      padding: 20px;
+  }
+
+  footer {
+      padding: 10px 0;
+  }
+}
